@@ -1,3 +1,36 @@
-.navbar:hover .navbar-collapse {
-    display: block;
-  }
+/* .navbar-nav .nav-item .nav-link.dropdown-toggle {
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover .nav-link.dropdown-toggle {
+  color: #007bff;
+  background-color: transparent;
+  
+} */
+
+.nav-link {
+  position: relative;
+}
+
+.navig-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.5s ease-in-out;
+}
+
+.navig-link:hover::after {
+  width: 100%;
+}
+
+
+
+
+/* 
+.navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+} */

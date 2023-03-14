@@ -5,25 +5,27 @@ import image1 from './ard.jpg'
 import image2 from './robot.jpg'
 import image3 from './mac.jpg'
 import './carousel.styles.css'
-function UncontrolledExample() {
+function CarouselSale() {
   return (
     <Fragment>
+      <a href="/limited">
       <div className='carousel-container'>
-    <Carousel className="bg-primary" style={{textAlign:'center', color:'yellow'}} pause='false' interval={5000}>
+    <Carousel className="bg-primary" style={{textAlign:'center', color:'yellow'}} pause='false' interval={3000}>
       <Carousel.Item>
-        <h1 className="robot-text" style={{marginTop: '20px', marginBottom:'45px', fontSize:'1.5rem'}}>50% off sale on Robotics Starter Kits!</h1>
+        <h1 className="robot-text" style={{marginTop: '20px', marginBottom:'45px', fontSize:'1.5rem'}}>50% off on Robotics Kits!</h1>
       </Carousel.Item>
       <Carousel.Item>
         <h1 className="robot-text" style={{marginTop: '20px', marginBottom:'45px', fontSize:'1.5rem'}}>Up to 45% off on Macbooks</h1>
       </Carousel.Item>
       <Carousel.Item>
-        <h1 className="robot-text" style={{marginTop: '20px', marginBottom:'45px', fontSize:'1.5rem'}}>3D printers low in stock. Buy Now!</h1>
+        <h1 className="robot-text" style={{marginTop: '20px', marginBottom:'45px', fontSize:'1.5rem'}}>New 3D printers! Buy Now!</h1>
       </Carousel.Item>
     </Carousel>
     </div>
+    </a>
     <Outlet/>
     </Fragment>
   );
 }
 
-export default UncontrolledExample;
+export default CarouselSale;

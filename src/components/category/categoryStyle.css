@@ -16,7 +16,7 @@
     align-items: flex-start;
     justify-content: center;
   }
-  .card:hover{
+  .category-card:hover{
     transform: scale(1.05);
     transition-duration: 160ms;
     box-shadow: 0 10px 20px rgba(1, 63, 34, 0.5), 0 4px 8px rgba(42, 53, 1, 0.5);

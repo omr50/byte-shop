@@ -3,7 +3,15 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './components/category/categoryStyle.css'
 import './components/PageTitle/carousel.styles.css'
+import './components/navbar/navbar.styles.css'
+import './components/shop/shop.styles.css'
+// import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./components/cart/cart.styles.css"
 import App from './App';
+import { UserProvider } from './contexts/user.context';
+import { ProductsProvider } from './contexts/products.context';
+import { CartProvider } from './contexts/cart.context';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +19,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <ProductsProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </ProductsProvider>
+    </UserProvider>
   </React.StrictMode>
   </BrowserRouter>
 );

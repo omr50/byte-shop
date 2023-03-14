@@ -7,16 +7,17 @@ import image4 from './image4.jpg'
 import image5 from './image5.jpg'
 
 const Category = ({Category}) => {
-    const {id, image, title, description} = Category
+    const {id, image, title, description, route} = Category
     let img = [image1, image2, image3, image4, image5]
     console.log(img)
     return (
-
-        <Card style={{ width: '30.3%', margin: '10px'}}>
+        
+        <Card style={{ maxWidth: '500px', margin: '10px'}} className="category-card">
+          <a href={route} style={{ textDecoration: 'none', color: 'darkgreen' }}>
         {/*React relative paths don't work so import images above */}
-        <Card.Img variant="top" src={img[id-1]}/>
+        <Card.Img variant="top" src={img[id-1]} style={{minHeight:'30vh'}}/>
         <Card.Body>
-          <Card.Title style={{ textAlign: 'center', fontSize: '1.5rem'}}>{title}</Card.Title>
+          <Card.Title style={{ textAlign: 'center', fontSize: '1.5rem', fontFamily: "'Roboto Mono', monospace"}}>{title}</Card.Title>
           <Card.Text>
             {description}
           </Card.Text>
@@ -24,6 +25,8 @@ const Category = ({Category}) => {
         {/* <Card.Body style={{ textAlign: 'center'}}>
           <Button className='btn-primary'>Shop Now</Button>
         </Card.Body> */}
+      </a>
+
       </Card>
     )
 }

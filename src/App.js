@@ -5,6 +5,7 @@ import CarouselSale from "./components/PageTitle/carousel.component";
 import SignInComp from "./components/SignUp/SignIn.component";
 import LogIn from "./components/LogIn/login.component";
 import Shop from "./components/shop/shop.component";
+import Checkout from "./components/checkout/checkout.component";
 const App = () => {
   
   return (
@@ -28,7 +29,7 @@ const App = () => {
       <Route path='/wires' element={<Shop route={"wire"}/>}/>
       <Route path='/components' element={<Shop route={"comp"}/>}/>
       <Route path='/limited' element={<Shop route={"limited"}/>}/>
-
+      <Route path='/checkout' element={<Checkout/>}/>
     </Route>
 
     </Routes>

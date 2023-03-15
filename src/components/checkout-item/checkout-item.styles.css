@@ -1,0 +1,51 @@
+.checkout-item-container {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    border-bottom: 1px solid darkgrey;
+    padding: 15px 0;
+    font-size: 20px;
+    align-items: center;
+}
+    .image-container {
+      width: 23%;
+      padding-right: 15px;
+    }
+      .checkout-img {
+        width: 100%;
+        height: 100%;
+      }
+
+.checkout-name,
+.checkout-quantity,
+.checkout-price {
+    width: 23%;
+}
+
+.checkout-quantity {
+    padding-left: 20px;
+}
+.arrow {
+    /* turns it to a pointer hand when hovering over it */
+    cursor: pointer;
+}
+
+.value{
+    margin: 0 10px;
+}
+.checkout-quantity {
+    display: flex;
+}
+    .arrow {
+    cursor: pointer;
+    }
+
+    .value {
+    margin: 0 10px;
+    }
+
+.remove-button {
+    padding-left: 12px;
+    cursor: pointer;
+}
+  

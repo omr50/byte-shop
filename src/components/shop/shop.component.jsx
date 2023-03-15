@@ -57,7 +57,7 @@ const Shop = ({route}) => {
                         <Card.Title style={{minHeight:'40px'}}>{product.name}</Card.Title>
                         <Card.Text>
                             <Card.Text style={{fontSize:'25px', color:'#AA4A44'}}><sup>$</sup>{product.price}</Card.Text>
-                            <Button onClick={() => addItemToCart(product)}>Add to cart</Button>
+                            <Button className="buttonCustom" onClick={() => addItemToCart(product)}>Add to cart</Button>
                         </Card.Text>
                         </Card.Body>
                     </Card>

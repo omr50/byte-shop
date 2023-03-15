@@ -1,7 +1,10 @@
 .buttonCustom {
     background-color:#ff8300 !important;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .buttonCustom:hover {
     background-color:#ffaa00 !important;
+    transform: scale(1.03);
+    box-shadow: 2px 2px 5px rgba(165, 40, 40, 0.5);
 }

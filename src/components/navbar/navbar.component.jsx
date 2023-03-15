@@ -19,7 +19,7 @@ function Navigbar() {
   return (
     <Fragment>
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container>
+      <Container className='navig-container'>
         <Navbar.Brand style={{color:'#50C878', fontSize:'25px'}} href="/" className='robot-text'>BYTE SHOP</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

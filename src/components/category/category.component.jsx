@@ -13,7 +13,7 @@ const Category = ({Category}) => {
     console.log(img)
     return (
         
-        <Card style={{ maxWidth: '500px', margin: '10px', cursor:'pointer'}} className="category-card">
+        <Card style={{ maxWidth: '450px', margin: '10px', cursor:'pointer'}} className="category-card">
           <LinkContainer to={route} style={{ textDecoration: 'none', color: 'darkgreen' }}>
             <div>
         {/*React relative paths don't work so import images above */}

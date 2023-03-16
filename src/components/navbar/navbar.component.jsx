@@ -64,12 +64,19 @@ function Navigbar() {
           {
             currentUser ? (
                 <Nav>
-                  <Nav.Link href="" onClick={signOutUser} className='navig-link'>Sign Out</Nav.Link>
+                  <LinkContainer to="/">
+                  <Nav.Link onClick={signOutUser} className='navig-link'>Sign Out</Nav.Link>
+                  </LinkContainer>
                 </Nav>
             ) :
             (<Nav>
-              <Nav.Link href="/login" className='navig-link'>Log In</Nav.Link>
-              <Nav.Link eventKey={2} href="/signin" className='navig-link'>Sign Up</Nav.Link>
+              <LinkContainer to="/login">
+                <Nav.Link href="/login" className='navig-link'>Log In</Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/signin">
+                <Nav.Link eventKey={2} href="/signin" className='navig-link'>Sign Up</Nav.Link>
+              </LinkContainer>
             </Nav>)
             
           }

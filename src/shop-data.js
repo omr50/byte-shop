@@ -1,0 +1,143 @@
+const SHOP_DATA = [{
+    title:"allProducts",
+    items:
+    [
+    {
+    id: 1,
+    name: "Raspberry Pi 3 B+",
+    imageURL: "https://i.imgur.com/ZgkV42y.png",
+    price:  35,
+    category: "sbc"
+ },
+ {
+     id: 2,
+     name: "Oscilloscope",
+     imageURL: "https://i.imgur.com/dyxQBWL.jpg",
+     price: 300,
+     category: "tool"
+  },
+  {
+     id: 3,
+     name: "Arduino",
+     imageURL: "https://i.imgur.com/3HRyO5g.jpg",
+     price: 15,
+    category: "mc"
+  },
+  {
+     id: 4,
+     name: "NVIDIA Jetson Nano",
+     imageURL: "https://i.imgur.com/CMVUfJT.jpg",
+     price: 150, 
+    category: "sbc"
+
+  },
+  {
+     id: 5,
+     name: "Arduino Nano",
+     imageURL: "https://i.imgur.com/Yez4Kzg.jpg",
+     price:  8,
+    category: "mc"
+  },
+  {
+     id: 6,
+     name: "100 Breadboard Wires",
+     imageURL: "https://i.imgur.com/Dj69axe.jpg",
+     price:  10,
+     category: "wire"
+  },
+  {
+     id: 7,
+     name: "Logic NAND gate",
+     imageURL: "https://i.imgur.com/yVsImag.jpg",
+     price:  1.15,
+     category: "comp"
+  },
+  {
+     id: 8,
+     name: "4.7 µFarad Capcitors",
+     imageURL: "https://i.imgur.com/r91mstu.jpg",
+     price:  0.75,
+     category: "comp"
+  },
+  {
+     id: 9,
+     name: "Multimeter",
+     imageURL: "https://i.imgur.com/Llrxn8N.jpg",
+     price:  12,
+     category: "tool"
+  },
+  {
+     id: 10,
+     name: "MOSFET collection",
+     imageURL: "https://i.imgur.com/vPirBJ4.jpg",
+     price: 15,
+     category: "comp"  
+  },
+  {
+     id: 11,
+     name: "2N3904 Transistor",
+     imageURL: "https://i.imgur.com/6ZaaInI.jpg",
+     price: 0.50,
+     category: "comp"  
+  },
+  {
+     id: 12,
+     name: "ESP-32 (wifi)",
+     imageURL: "https://i.imgur.com/mBnDUwu.jpg",
+     price:  8,
+    category: "mc"
+  },
+  {
+     id: 13,
+     name: "USB-A to USB-B",
+     imageURL: "https://i.imgur.com/xn9qzjh.jpg",
+     price:  4,
+     category: "wire"
+  },
+  {
+     id: 14,
+     name: "500 Resistors (values: 1 Ω-10 MΩ)",
+     imageURL: "https://i.imgur.com/SiaqAXc.jpg",
+     price:  10,
+     category: "comp"
+  },
+  {
+     id: 15,
+     name: "Wire Cutter",
+     imageURL: "https://i.imgur.com/fxsfvXC.jpg",
+     price:  6,
+     category: "tool"
+  },
+  {
+     id: 16,
+     name: "Wire Crimpers",
+     imageURL: "https://i.imgur.com/PR59VEn.jpg",
+     price:  12,
+     category: "tool"
+  },
+  {
+   id: 17,
+   name: "Mac Book Pro",
+   imageURL: "https://i.imgur.com/gx0JKie.jpg",
+   price:  1000,
+   category: "limited"
+},
+{
+   id: 18,
+   name: "3D printer",
+   imageURL: "https://i.imgur.com/MpMMDIO.jpg",
+   price:  349,
+   category: "limited"
+},
+{
+   id: 19,
+   name: "Robotics Kit",
+   imageURL: "https://i.imgur.com/PyY0Zra.jpg",
+   price:  48,
+   category: "limited"
+}
+]
+
+}]
+
+export default SHOP_DATA;

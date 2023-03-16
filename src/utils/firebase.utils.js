@@ -2,10 +2,9 @@ import { initializeApp } from 'firebase/app'
 // getAuth allows us to get info on authenticated users
 import {getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged} from 'firebase/auth'
 // https://firebase.google.com/docs/web/setup#available-libraries
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
-
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from 'firebase/firestore'
 // Your web app's Firebase configuration
-
+import { useNavigate } from 'react-router-dom';
 const firebaseConfig = {
 
   apiKey: "AIzaSyDp6vNjC84Fhg2e1sNy5jgZtxamvURQLB4",
@@ -37,14 +36,45 @@ const provider = new GoogleAuthProvider();
 // we create a function that allows us to sign in with google
 
 export const signInWithGoogle = async () => {
+    
+
     // the function alone will show the pop up and allow
     // the user to sign in with their google account. 
     await signInWithPopup(auth, provider)
     // const userDocRef = await createUserDocumentFromAuth(user)
-    
 }
 
 export const db = getFirestore()
+
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) =>{
+    // created collection and got its reference
+    const collectionRef = collection(db, collectionKey);
+
+    const batch = writeBatch(db);
+
+    objectsToAdd.forEach((object) => {
+        const docRef = doc(collectionRef, object.title.toLowerCase());
+        batch.set(docRef, object);
+    })
+
+    await batch.commit();
+    console.log('done')
+
+}
+
+export const getCategoriesAndDocuments = async () => {
+    const collectionRef = collection(db, 'categories');
+    const q = query(collectionRef);
+
+    const querySnapshot = await getDocs(q);
+    const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+        const {title, items} = docSnapshot.data();
+        acc[title.toLowerCase()] = items;
+        return acc;
+    }, {})
+
+    return categoryMap;
+}
 
 //gets data from auth service and stores it in
 // firestore db.

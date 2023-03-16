@@ -6,8 +6,10 @@ import SignInComp from "./components/SignUp/SignIn.component";
 import LogIn from "./components/LogIn/login.component";
 import Shop from "./components/shop/shop.component";
 import Checkout from "./components/checkout/checkout.component";
+import { CategoriesContext } from "./contexts/categories.context";
+import { useContext } from "react";
 const App = () => {
-  
+  const categories = useContext(CategoriesContext);
   return (
     // electronic e commerce
     // front page should be an intro to the website, what it does, etc.

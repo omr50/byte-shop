@@ -7,6 +7,7 @@ import { Outlet, Link } from "react-router-dom"
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 import { signOutUser } from '../../utils/firebase.utils';
+import { LinkContainer } from 'react-router-bootstrap';
 import CartLink from '../cart/cart.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
@@ -20,23 +21,44 @@ function Navigbar() {
     <Fragment>
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container className='navig-container'>
-        <Navbar.Brand style={{color:'#50C878', fontSize:'25px'}} href="/" className='robot-text'>BYTE SHOP</Navbar.Brand>
+      <LinkContainer to="/">
+        <Navbar.Brand className='robot-text title-style'>BYTE SHOP</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/shop" className='navig-link'>Shop</Nav.Link>
+            <LinkContainer to="/shop">
+              <Nav.Link className='navig-link'>Shop</Nav.Link>
+            </LinkContainer>
+            
             <NavDropdown title="Categories" id="collasible-nav-dropdown" className='navig-link'>
-              <NavDropdown.Item href="/mc">Microcontrollers</NavDropdown.Item>
-              <NavDropdown.Item href="/sbc">
-                Single Board Computers
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/components">Components</NavDropdown.Item>
-              <NavDropdown.Item href="/tools">Tools</NavDropdown.Item>
-              <NavDropdown.Item href="/wires">Cables and Wires</NavDropdown.Item>
+            <LinkContainer to="/mc">
+              <NavDropdown.Item>Microcontrollers</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/sbc">
+                <NavDropdown.Item>
+                  Single Board Computers
+                </NavDropdown.Item>
+              </LinkContainer>
+
+              <LinkContainer to="/components">
+                <NavDropdown.Item>Components</NavDropdown.Item>
+              </LinkContainer>
+              
+              <LinkContainer to="/components">
+                <NavDropdown.Item>Tools</NavDropdown.Item>
+              </LinkContainer>
+              
+              <LinkContainer to="/wires">
+                <NavDropdown.Item>Cables and Wires</NavDropdown.Item>
+              </LinkContainer>
+
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/limited">
+              <LinkContainer to="/limited">
+                <NavDropdown.Item>
                 Limited Time Items
               </NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
           </Nav>
           {

@@ -27,9 +27,21 @@
   width: 100%;
 }
 
+.dropdown-item {
+  background-color: white !important;
+  color: black !important;
+}
+.title-style{
+  color:#50C878 !important;
+  font-size:25px !important;
+}
 
 
-
+a .active {
+  text-decoration: none;
+  color: black !important;
+  background-color: white !important;
+}
 /* 
 .navbar-nav .nav-item:hover .dropdown-menu {
   display: block;

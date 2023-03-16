@@ -5,10 +5,12 @@ import image1 from './ard.jpg'
 import image2 from './robot.jpg'
 import image3 from './mac.jpg'
 import './carousel.styles.css'
+import { LinkContainer } from "react-router-bootstrap";
+
 function CarouselSale() {
   return (
     <Fragment>
-      <a href="/limited">
+      <LinkContainer to="/limited" style={{cursor:'pointer'}}>
       <div className='carousel-container'>
     <Carousel className="bg-primary" style={{textAlign:'center', color:'yellow'}} pause='false' interval={3000}>
       <Carousel.Item>
@@ -22,7 +24,7 @@ function CarouselSale() {
       </Carousel.Item>
     </Carousel>
     </div>
-    </a>
+    </LinkContainer>
     <Outlet/>
     </Fragment>
   );

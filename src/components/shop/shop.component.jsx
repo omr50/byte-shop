@@ -30,7 +30,7 @@ const Shop = ({route}) => {
         <div style={{display:"flex", flexWrap:"wrap", justifyContent:'center'}}>
             {categoriesMap.allproducts.map((category) =>(
                     
-                    <Card style={{ width: '22rem', margin:'10px', backgroundColor:'#ffE6FA'}}>
+                    <Card style={{ width: '22rem', margin:'10px', backgroundColor:'white'}}>
                     <div style={{ height: '220px', overflow: 'hidden' }}>
                       <Card.Img variant="top" src={category.imageURL} style={{ objectFit: 'cover', height: '100%', width: '100%' }} />
                     </div>
@@ -53,7 +53,7 @@ const Shop = ({route}) => {
             <h1 style={{textAlign:'center', color:'#9F2B68', marginTop:'10px'}} className='robot-text'>{routeToCategoryName[route]}</h1>
             <div style={{display:"flex", flexWrap:"wrap", justifyContent:'center'}}>
                 {filteredItems.map((category) =>(
-                        <Card style={{ width: '22rem', margin:'10px', backgroundColor:'#ffE6FA'}}>
+                        <Card style={{ width: '22rem', margin:'10px', backgroundColor:'white'}}>
                         <div style={{ height: '220px', overflow: 'hidden' }}>
                         <Card.Img variant="top" src={category.imageURL} style={{ objectFit: 'cover', height: '100%', width: '100%' }} />
                         </div>
